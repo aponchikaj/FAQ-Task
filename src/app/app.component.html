@@ -1,16 +1,60 @@
-<main class="h-[100vh] w-full bg-lightPink overflow-y-scroll">
-  <section style="background-image: url(../assets/images/background-pattern-mobile.svg);" class="absolute  md:hidden w-full h-[30vh] bg-bottom bg-cover">
-  </section>
-  <section class="h-[100vh] flex relative justify-center items-center">
-    <section class="h-[80vh] min-w-[80%] max-w-[90%] rounded bg-white">
-      <section class="flex items-center p-[20px]">
-        <img src="../assets/images/icon-star.svg" alt="Star" class="h-[3vh]">
-        <h1 class="text-[28px] font-WorkSans font-semibold mx-[10px]">FAQs</h1>
+<span style="background-image: url(../assets/images/background-pattern-mobile.svg);" class="absolute bg-bottom bg-cover h-[30vh] md:h-[40vh] w-full"></span>
+
+
+<main class="h-[100vh] flex justify-center items-center w-full flex-wrap">
+  <section class="relative h-[60vh] w-full bg-white rounded-[14px] min-w-[50vh] max-w-[60vh] md:max-w-[70vh] shadow-2xl overflow-y-scroll">
+    <section class="flex items-center px-[20px] py-[20px]">
+      <img src="../assets/images/icon-star.svg" alt="Star" class="h-[4vh]">
+      <h2 class="font-WorkSans font-semibold text-[32px] flex mx-[40px]">FAQs</h2>
+    </section>
+
+
+    <section class="flex mx-[20px] flex-wrap justify-between items-center">
+      <p class="min-w-[10vh] max-w-[40vh] font-semibold text-[19px] md:text-[21px]">What is Frontend Mentor, and how will it help me?</p>
+      <button (click)="OpenFirstQuestion()"><img src="../assets/images/icon-plus.svg" alt="PlusBtn" class="cursor-pointer flex h-[5vh] " *ngIf="Plus"></button>
+      <button (click)="CloseFirstQuestion()"><img src="../assets/images/icon-minus.svg" alt="MinusBtn" class=" cursor-pointerflex h-[5vh]" *ngIf="FirstQuestion"></button>
+      <section *ngIf="FirstQuestion" class="my-[10px] font-thin">
+        <p>Frontend Mentor offers realistic coding challenges to help developers improve their 
+          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+          all levels and ideal for portfolio building.</p>
       </section>
-      <section class="flex flex-wrap mx-[30px] font-semibold text-[22px] justify-around w-full">
-        <p class="w-[40vh]">what is frontend mentor, and how will it help me?</p>
-        <button><img src="../assets/images/icon-plus.svg" alt="PlusIcon" class="h-[6vh]"></button>
-        
+    </section>
+
+    <hr class="w-[85%] mx-auto my-[15px]">
+
+    <section class="flex mx-[20px] flex-wrap justify-between items-center">
+      <p class="min-w-[10vh] max-w-[40vh] font-semibold text-[19px] md:text-[21px]">Is Frontend Mentor free?</p>
+      <button (click)="OpenSecondQuestion()"><img src="../assets/images/icon-plus.svg" alt="PlusBtn" class="cursor-pointer flex h-[5vh]" *ngIf="Plus"></button>
+      <button (click)="CloseSecondQuestion()"><img src="../assets/images/icon-minus.svg" alt="MinusBtn" class="cursor-pointer flex h-[5vh]" *ngIf="SecondQuestion"></button>
+      <section *ngIf="SecondQuestion" class="my-[10px] font-thin">
+        <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+          option providing access to a range of projects suitable for all skill levels.</p>
+        </section>
+    </section>
+
+    <hr class="w-[85%] mx-auto my-[15px]">
+
+
+    <section class="flex mx-[20px] flex-wrap justify-between items-center">
+      <p class="min-w-[10vh] max-w-[40vh] font-semibold text-[19px] md:text-[21px]">Can I use Frontend Mentor projects in my portfolio?</p>
+      <button (click)="OpenThirdQuestion()"><img src="../assets/images/icon-plus.svg" alt="PlusBtn" class="cursor-pointer flex h-[5vh]" *ngIf="Plus"></button>
+      <button (click)="CloseThirdQuestion()"><img src="../assets/images/icon-minus.svg" alt="MinusBtn" class=" cursor-pointer flex h-[5vh]" *ngIf="ThirdQuestion"></button>
+      <section *ngIf="ThirdQuestion" class="my-[10px] font-thin">
+        <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!</p>
+      </section>
+    </section>
+
+    <hr class="w-[85%] mx-auto my-[15px]">
+
+
+    <section class="flex mx-[20px] flex-wrap justify-between items-center">
+      <p class="min-w-[10vh] max-w-[40vh] font-semibold text-[19px] md:text-[21px]">How can I get help if I'm stuck on a Frontend Mentor challenge?</p>
+      <button (click)="OpenFourthQuestion()"><img src="../assets/images/icon-plus.svg" alt="PlusBtn" class="cursor-pointer flex h-[5vh]" *ngIf="Plus"></button>
+      <button (click)="CloseFourthQuestion()"><img src="../assets/images/icon-minus.svg" alt="MinusBtn" class="cursor-pointer flex h-[5vh]" *ngIf="FourthQuestion"></button>
+      <section *ngIf="FourthQuestion" class="my-[10px] font-thin">
+        <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+          channel where you can ask questions and seek support from other community members.</p>
       </section>
     </section>
   </section>
